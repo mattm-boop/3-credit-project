@@ -1,0 +1,320 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{color}
+
+
+\usepackage[font= footnotesize,labelfont=bf, margin = 0.5cm]{caption}
+
+%---------------Footnotes-------------------
+\usepackage[bottom]{footmisc} %syntax: \footnote[symbol]{...}
+\makeatletter
+\def\@xfootnote[#1]{%
+  \protected@xdef\@thefnmark{#1}%
+  \@footnotemark\@footnotetext}
+\makeatother
+
+%-------------------------------------------
+
+%\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+
+%-------------------------------------RICING
+\usepackage[dvipsnames]{xcolor}
+%\topmargin=-1.1cm
+%\textheight=25cm
+%\oddsidemargin=-.7cm
+%\evensidemargin=-.7cm
+%\textwidth=17.5cm
+%\baselineskip=7mm
+
+\usepackage{setspace}
+%\doublespacing
+%\parindent=10mm
+\linespread{1.15}
+\setlength{\parskip}{0.25em} 
+%-------------------------------------
+%\DeclareMathSizes{11}{20}{14}{10}
+%----------------FANCY----------------
+%\usepackage{fancyhdr}
+%\setlength{\headheight}{15pt} 
+%\pagestyle{fancy}
+%\fancyhf{}
+%\rhead{}
+%\lhead{AV}
+%\rfoot{Page \thepage}
+%-------------------------------------
+\usepackage[backend=biber]{biblatex}
+\addbibresource{test_bib}
+%------------SECTSTY-----------------
+\usepackage{sectsty}
+
+%\chapterfont{\color{Sepia}}  % sets colour of chapters
+%\sectionfont{\color{Maroon}}  % sets colour of sections
+%\allsectionsfont{\mdseries\scshape \color{Sepia}}
+\allsectionsfont{\mdseries\color{Sepia}}
+%---------------------------------------------
+
+%---We might use subfig
+%\usepackage{tabularx}
+%\usepackage{adjustbox}
+%\usepackage{subfig}
+%--------------------------------------------
+
+\title{3 - Credit Project \\ Notes}
+\author{me\footnote{\href{mailto:athanasios.voutouras.9567@student.uu.se}{athanasios.voutouras.9567@student.uu.se}}
+}
+%\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Anomalies in a quantum system occur when a symmetry in the said system behaves
+different than expected by the standards of a classic theory. Different cases
+of anomalies can be observed for different theories with different outcomes and
+problems. Examples of the implications anomalies can cause are the non-conservation of currents, failure
+of regularization and other problems such as the ones we will explore in this
+text.\footnote{Introductory information about quantum anomalies in quantum field theory
+can be found in QFT textbooks such as \cite{MichaelE.Peskin2019, Srednicki2019}
+and others.}
+
+We will consider the simplest case where such quantum anomalies can occur, a
+0+1 dimensional field theory (quantum mechanics) describing free and massless
+Majorana fermions. We base the work on the 3rd section of \cite{Delmastro2021}.
+We will see how an anomaly arises from a $ \mathbb{Z}_2  $ symmetry in the
+form of 1) the non-existence of a well-defined partition function and 2) on how it
+affects the commutation and anti-commutation relations of the global symmetries
+$ \mathsf{T} $ and $ (-1)^F$ operators.
+
+
+\section{The $\mathbb{Z}_2$ anomaly in 0+1 dimensions}
+We consider the case of massless and free Majorana
+fermions in 0+1 dimensions with the following Lagrangian
+\begin{equation}
+	\mathcal{ L } = \sum_{n=1}^{N} \frac{ i }{ 4 } \psi ^n \partial _t \psi ^n.
+\end{equation}
+By quantizing we come up with with the fields $ \psi ^n $ which obey the algebra
+\begin{equation}
+	\{ \psi ^n, \psi^m\} = 2 \delta ^{ nm }. 
+\end{equation}
+The fields are Grassmann numbers \cite{Traubenberg2009, Berezin1975}. We are interested in the two $ \mathbb{Z}_2  $ lagrangian symmetries $ \mathsf{T}$ and $ (-1)^F $ which correspond to time reversal and parity respectively. The two operators should commute with each other but it is shown that this is not always the case. We will also see that for an odd number of fermions, $ (-1)^F $ fails to create a graded Hilbert space.
+We will follow \cite{Delmastro2021} and perform the calculations explicitly.
+\subsection{Odd number of fermions}
+Firstly, we will assume a fermion placed in a (temporal) ring of "circumference" $ L $ with either anti-periodic and periodic boundary conditions. For the anti-periodic case we will compute the partition function for a single particle in this setup. The path integral, after the regularization  will turn out to be $ \sqrt{ 2 } $. This number should be equal to the dimension of the Hilbert space as it measures the number of possible states but the result indicates that there is no acceptable Hilbert space for such kind of setup.
+
+The first step is to compute the action
+\begin{equation}
+	S = \int \mathrm{d} t \mathcal{ L } = \int \mathrm{d} t \sum_{n=1}^{N} \frac{ i }{ 4 } \psi ^n \partial _t \psi ^n.
+	\label{eqn:action}
+\end{equation}
+We focus on a single particle but we can always generalize.
+\begin{equation}
+	S = \frac{ i }{ 4 }  \int \mathrm{d} t	\psi \partial_t \psi .
+	\label{eqn:action_1}
+\end{equation}
+We expand the fields into Fourier modes \cite{PhilipBoyleSmith2021},\cite{Berezin1977} and assume that the Grassmann numbers have no time dependence. Since we require the boundary conditions to be anti-periodic (after a period, the sign changes) the $ k $ 's are required to be half integers, $ k \in \mathbb{ Z } +1/2 $.
+\begin{equation}
+	\psi = \frac{ 1 }{ \sqrt{L} } \sum_{k}^{} A_k e ^{ 2 \pi i k t/L } \quad,\quad k = \dots - \frac{ 3 }{ 2 } ,- \frac{ 1 }{ 2 } , \frac{ 1 }{ 2 } , \frac{ 3 }{ 2 } \dots
+\end{equation}
+The time derivative gives
+\begin{equation*}
+	\partial _t \psi = \frac{ 2 \pi i  }{ L } \frac{ 1 }{ \sqrt{ L }  } \sum_{k}^{} k A_k e ^{ 2 \pi i k t/L }
+\end{equation*}
+and the action (\ref{eqn:action_1}) becomes
+\begin{equation*}
+	S_1 = - \frac{ 2 \pi  }{ 4 L^2 } \int \mathrm{d} t \sum_{k,m}^{} A_k e ^{ 2 \pi i k t/L } m A_m e ^{ 2 \pi i m t/L } = - \frac{ \pi  }{ 2 L^2 } \sum_{k,m}^{} \int \mathrm{d} t A_k m A_m e ^{ \frac{ 2 \pi i }{ L } (k+m) t } .
+\end{equation*}
+The time integral over a period is
+\begin{equation*}
+	\int \mathrm{d} t e ^{ \frac{ 2 \pi i }{ L } (k+m) t } = \frac{ L }{ 2 \pi  } \int \mathrm{d}\tilde{t} e ^{ i (k+m) \tilde{t} } = \frac{ L }{ 2 \pi  } 2 \pi \delta _{ k,-m } = L \delta _{ k,-m } 
+\end{equation*}
+where $ \tilde{t}=2 \pi t/L $. Altogether we have
+\begin{equation}
+	S_1 = - \frac{ \pi  }{ 2L } \sum_{k,m}^{} A_k m A_m \delta _{ k,-m } 
+\end{equation}
+or, by summing over the $ k $ 's,
+\begin{equation}
+	S_1 = - \frac{ \pi  }{ 2L } \sum_{m}^{} A _{ -m } m A_m
+\end{equation}
+The partition function is then
+\begin{equation*}
+	Z_1 = \int \mathcal{ D } \psi (t) \text{exp} \big\{- S_{1}[ \psi (t)]\big\}  
+\end{equation*}
+and it must be dimensionless. Following \cite{PhilipBoyleSmith2021}, we introduce a constant that takes care of the dimensions as well as  other constants that may emerge. {\color{red} the anti-commutation relations of the $ A_m $'s to change the sum in the action into positive integers??} We then get
+\begin{equation}
+	Z_1 = C \prod_m \int \mathrm{d} A _{ -m } \mathrm{d} A_m e ^{ \frac{ \pi m }{ 2L } A _{ -m } A_m } = \prod_m \left( \frac{ C \pi m }{ 2 L }  \right)
+	\label{eqn:partition}
+\end{equation}
+where $ m $ runs through positive half-integers. $ C $ will eliminate all of the remaining constants and we'll end up with $Z_1 = \prod _m m $ which we have to regularize. We  use the zeta function regularization method.
+
+We first need to express the partition function $ Z_1 $ in terms of the zeta function,
+\begin{equation}
+	\zeta (s) = \sum_{n = 1}^{\infty} \frac{ 1 }{ m^s } 
+\end{equation}
+We have\footnote{note that $ \frac{\mathrm{d} (1/m^s)}{\mathrm{d} s} = - \frac{  1}{(m^s)^2  } \frac{\mathrm{d} (m^s)}{\mathrm{d} s}   = - \frac{  1}{(m^s)^2  } \frac{\mathrm{d} }{\mathrm{d} s} e ^{ s \ln(m) } = -\ln(s) m^s/(m^s)^2= -\ln(m)/m^s $}
+\begin{equation*}
+	\ln \left(Z_1\right)=\sum_m \ln (m)=\left.\sum_m \frac{\ln (m)}{m^{s}}\right|_{s=0}=-\left.\frac{d}{d s} \sum_m \frac{1}{m^{s}}\right|_{s=0}\quad ,\quad m=1/2,3/2, \dots
+\end{equation*}
+Playing a bit with the $ \zeta(s) $ expansions and the sum over $ m $'s we can see that 1.
+\begin{equation*}
+	\sum_{n=1/2,3/2,\dots}^{} \frac{ 1 }{ n^s } = s \left( 1 + \frac{ 1 }{ 3^s } + \frac{ 1 }{ 5^s } + \dots  \right) 
+\end{equation*}
+and 2.
+\begin{equation*}
+	2^s\zeta(s) = 1 + 2^s \left( 1 + \frac{ 1 }{ 3^s} + \frac{ 1 }{ 5^s } + \dots  \right) + \frac{ 1 }{ 2^s } + \frac{ 1 }{ 3^s } + \frac{ 1 }{ 4^s } + \dots = \zeta(s) + 2^s \left( 1 + \frac{ 1 }{ 3^s} + \frac{ 1 }{ 5^s } + \dots  \right)
+\end{equation*}
+Combining the above two, we have
+\begin{equation*}
+	\sum_{m=1/2,3/2,\dots}^{} \frac{ 1 }{ m^s } = \left( 2^s -1 \right) \zeta(s)
+\end{equation*}
+and plugging it into the partition function we have
+\begin{equation*}
+	\ln \left(Z_1\right)=-\left.\frac{d}{d s}\left[\left(2^{s}-1\right) \zeta(s)\right]\right|_{s=0}=-\left[\frac{d}{d s}\left(2^{s}-1\right)\right]_{s=0} \zeta(0)=-[\ln (2)] \times\left(-\frac{1}{2}\right)
+\end{equation*}
+which gives us
+\begin{equation*}
+	Z_1 = \sqrt{ 2 } 
+\end{equation*}
+
+The calculation is the same for the periodic boundary conditions but $ m $ runs through $ \mathbb{ Z }  $. This means that there are zero modes for the fermions which makes the product  (\ref{eqn:partition}) zero.
+
+\subsection{n = 2 mod 4 number of fermions}
+We follow \cite{Delmastro2021} and perform the calculations explicitly.  Note that since $ \mathsf{T} $ is anti-unitary we have $i \xrightarrow{\mathsf{T}} -i$. We are considering $ n = 2 \text{ mod } 4 $ number of fermions and this is due to the classification of the anomalies. We will show that the time reversal operation produces a change in parity for some particular $ m $'s.
+We first define the creation and annihilation operators as
+\begin{equation}
+	\psi _{ \pm } ^A = \frac{ 1 }{ 2 } \left( \psi ^{ 2A-1 } \pm i \psi ^{ 2A }  \right) 
+\end{equation}
+with $ A = 1,2,\dots,n/2 $. For explanation and more details see \cite{Traubenberg2009}. We can confirm that the fields will obey
+\begin{equation}
+	\{ \psi _+ ^A, \psi _-^B\} = \delta ^{ AB } \quad,\quad \{ \psi ^A _{ \pm } , \psi ^B _{ \pm } \} =0.
+	\label{eqn:commutators}
+\end{equation}
+Also, using the anti-unitarity of $ \mathsf{T} $, we have
+\begin{eqnarray*}
+	\mathsf{T} \psi _{ \pm } &=& \mathsf{T} \frac{ 1 }{ 2 } \left( \psi ^{ 2A-1 } \pm i \psi ^{ 2A } \right) \\
+	&=& \frac{ 1 }{ 2 } \psi ^{ 2A-1 } \mathsf{T} \mp i\frac{ 1 }{ 2 }  \psi ^{ 2A } \mathsf{T}\\
+	&=& \psi _{ \mp } \mathsf{T}
+\end{eqnarray*}
+and so
+\begin{equation}
+	\mathsf{T} \psi _{ \pm } = \psi _{ \mp } \mathsf{T}
+	\label{eqn:tcreation}
+\end{equation}
+We assume that the action of $ \mathsf{T} $ on the ground state produces a general state
+\begin{equation}
+	\mathsf{T} | 0 \rangle = a | 0 \rangle + a_A \psi _+ ^{A} | 0 \rangle + \dots + a _{ 12\dots m/2 } \psi _+^1 \psi _+^2\dots \psi_+^{ m/2 } | 0 \rangle
+	\label{eqn:tstate}
+\end{equation}
+Acting with $ \psi_- $ we get
+\begin{equation}
+	\psi _- ^A \mathsf{T} | 0 \rangle = \mathsf{T} \psi _+ | 0 \rangle = \psi _-^A a | 0 \rangle +a_A \psi _-^A \psi _+^A | 0 \rangle + \dots + a _{ 12\dots m/2 } \psi _-^A \psi _+^1 \psi _+^2 \dots \psi _+ ^{ m/2 } | 0 \rangle
+	\label{eqn:psit}
+\end{equation}
+The first term vanishes and we can use the commutation relations (\ref{eqn:commutators}) to simplify further the:
+\begin{equation*}
+	\mathsf{T} \psi_+ ^A | 0 \rangle = a_A | 0 \rangle + \dots + a _{ 12\dots m/2 } \psi_- ^A \psi_+ ^1 \psi_+^2 \dots \psi_+ ^{ m/2 } | 0 \rangle 
+\end{equation*}
+
+We act $ m/2 -1 $ more times with $ \psi _- $'s and acting with $ \mathsf{T} $ we trivially get that
+\begin{equation}
+	\psi _+ ^1 \psi ^2_+ \dots \psi _+ ^{ m/2 } | 0 \rangle = a _{ 12 \dots m/2 } \mathsf{T} | 0 \rangle
+\end{equation}
+We have established that the last coefficient is non-zero. We can check if that makes sense by doing the following. We act once more with $ \mathsf{T} $ on (\ref{eqn:psit}) and using the fact that $ \mathsf{T}^2 = \pm 1  $, we have the following:
+\begin{align*}
+	\pm \psi_+^A | 0 \rangle = a_A \mathsf{T} | 0 \rangle + \dots +\mathsf{T} a _{ 12\dots m/2 } \psi_- ^A \psi_+ ^1 \psi_+^2 \dots \psi_+ ^{ m/2 } | 0 \rangle \\
+	= a_A \mathsf{T} | 0 \rangle + \dots + a _{12\dots m/2} \psi_+^A \psi_-^1 \psi_-^2 \dots \psi_-^{m/2} \mathsf{T}| 0 \rangle
+\end{align*}
+We now use (\ref{eqn:tcreation}) to "move" $ \mathsf{T} $ next to the ground state kets and expand using (\ref{eqn:tstate}) to get
+\begin{align*}
+	\pm \psi _+^A | 0 \rangle &= 
+	a_A \left\{ a | 0 \rangle + a_A \psi _+ ^A | 0 \rangle + \dots + a _{ 12\dots m/2 }\psi_+ ^1 \psi_+^2 \dots \psi_+ ^{ m/2 } | 0 \rangle   \right\} + \dots \\
+	&\qquad + a _{ 12\dots m/2 } \psi_+^A \psi_- ^1 \psi_-^2 \dots \psi_- ^{ m/2 } \left\{ a | 0 \rangle + a_A \psi _+ ^A | 0 \rangle + \dots + a _{ 12\dots m/2 }\psi_+ ^1 \psi_+^2 \dots \psi_+ ^{ m/2 } | 0 \rangle   \right\}  \\
+	&= a_A a | 0 \rangle +a_A^2 \psi_+^A | 0 \rangle + \dots + a_A a _{ 12\dots m/2 } \psi _+^1 \psi _+^2 \dots \psi _+ ^{ m/2 } | 0 \rangle +\dots \\
+	&\qquad+ a _{ 12\dots m/2 } \psi _+ ^A \psi _- ^1 \psi _- ^2 \dots \psi _- ^{ m/2 } a | 0 \rangle + a _{ 12\dots m/2 } \psi _+^A \psi _-^1 \psi _-^2 \dots \psi _- ^{ m/2 } a_A \psi _+ ^A | 0 \rangle \\
+	&\qquad+ \dots + \left( a _{ 12 \dots m/2 }  \right) ^2 \psi _+^A \psi _-^1 \psi _-^2 \dots \psi _- ^{ m/2 } \psi _+ ^1 \psi _+ ^2 \dots \psi _+ ^{ m/2 } | 0 \rangle 
+\end{align*}
+At the LHS we have a single particle state so we need to assign values to the constants of (\ref{eqn:tcreation}) so the equation makes sense. Assuming that the coefficient $ a _{ 12 \dots m/2 }  $ is non-zero the only way for the equation to hold is if all the other coefficients vanish, namely
+\begin{equation}
+	\mathsf{T} | 0 \rangle = a _{ 12\dots m/2 } \psi _+ ^{ 1 } \psi _+ ^{ 2 } \dots \psi _+ ^{ m/2 } | 0 \rangle
+	\label{eqn:final}
+\end{equation}
+
+The anomaly appears once we act with the parity operator. We can see that
+having an odd $ m/2 $ gives rise to a minus. For numbers like $ 6,10, \dots $
+(2 mod 4), we see that we get $ 3,5,\dots $ number of modes that result to an odd parity
+since each field gives out a minus.
+
+\subsection{n = 4 mod 8 number of fermions}
+We use (\ref{eqn:final}) and act once more with $ \mathsf{T} $. We get
+\begin{align*}
+	\mathsf{T}^2 | 0 \rangle &= a _{ 12\dots m/2 } \mathsf{T} \psi _+^1 \psi _+^2 \dots \psi _+ ^{ m/2 } | 0 \rangle \\
+	&= a _{ 12\dots m/2 } \psi _-^1 \psi _-^2 \dots \psi _- ^{ m/2 } \mathsf{T} | 0 \rangle\\
+	&= a _{ 12\dots m/2 } \psi _-^1 \psi _-^2 \dots \psi _- ^{ m/2 } a _{ 12\dots m/2 } \psi _+^1 \psi _+^2 \dots \psi _+ ^{ m/2 } | 0 \rangle\\
+	&= |a _{ 12\dots m/2 }|^2 \psi _-^1 \psi _-^2 \dots \psi _- ^{ m/2 } \psi _+^1 \psi _+^2 \dots \psi _+ ^{ m/2 } | 0 \rangle 
+\end{align*}
+Now, the $ \psi _+ ^1 $ anti-commutes with the $ \psi _-^A $'s and gives a factor of $ (-1) ^{ m/2-1 }  $ before we use (\ref{eqn:commutators})'s first relation to get $ 1 - \psi _+^1 \psi _-^1 $. The annihilation operator will act on $ | 0 \rangle  $ and so we will omit it as it just returns zero. We do the same for the other operators and get
+\begin{align*}
+	\mathsf{T}^2 | 0 \rangle &= (-1) ^{ \frac{ m }{ 2 } -1 } (-1) ^{ \frac{ m }{ 2 } -2 } \dots (-1) | 0 \rangle \\
+	&= (-1) ^{ ( \frac{ m }{ 2 } -1)+( \frac{ m }{ 2 } -2 ) + \dots +(-1) } | 0 \rangle \\
+	&= (-1) ^{ \frac{ 1 }{ 2 }  \left( \frac{ m }{ 2 } -1 \right) \left[ \left( \frac{ m }{ 2 } -1 \right) +1 \right] } | 0 \rangle \\
+	&= (-1) ^{ \frac{ m }{ 4 } \left( \frac{ m }{ 2 } -1 \right)  } | 0 \rangle 
+\end{align*}
+It's fairly easy to see that for $ \nu = 4 \text{ mod } 8 $ we only get odd powers of $ (-1) $ and thus $ \mathsf{T}^2 = -1 $.
+\subsection{Discussion}
+The results above demonstrate a simple case of an anomaly. For the \textbf{odd}
+number of fermions we saw that there was no graded Hilbert space associated
+with the theory, i.e. quantization for Majorana fermions in 0+1 dimensions fails.
+Equivalently, the partition function, which should coincide with the dimension
+of our Hilbert space is a non-integer and therefore not well-defined.
+
+For an \textbf{even} number of fermions (we are not considering multiples of 8)  we
+found that $ \mathsf{T} $ acting on the vacuum state, generates a new states
+with all the available fields, i.e. $ \mathsf{T} | 0 \rangle \sim \psi _+^1
+\psi x_+ ^2 \dots \psi ^{n/2} _+ | 0 \rangle  $. For $ m = 2 \text{ mod } 4 $
+which are the numbers $ 1,6,10,14,18,\dots $ , $ m/2 $ gives a series of odd
+numbers which in turn makes the parity of the state odd.  The operators no
+longer commute, but they anti-commute. The next set of $ m $'s are the $ m = 4
+\text{ mod } 8 $ set which are $ 4,12,20,28,\dots $. Now we see that acting
+with $ \mathsf{T}^2 $ instead of returning to the original state, we get a
+different phase (change of sign) which $ \mathsf{T}^2 = -1 $. 
+
+The authors of \cite{Delmastro2021} argue that these anomalies can be
+classified according to their topological properties.The parity (global
+symmetry), denoted by $ (-1)^F $, creates a $ \mathbb{Z}_2  $ grading on the
+Hilbert space, which in turn requires the symmetries of the system to be
+classified with cocycles $ w_1,w_2 $ with \begin{equation*} w_1 \in
+H^1(G,\mathbb{Z}_2)\quad , \quad w_2 \in H^2(G, \mathbb{Z}_2^F) \end{equation*}
+such that $ w_2 $ specifies a $ \mathbb{Z}_2^F  $ central extension of $ G $
+while $ w_1 $  reflects the unitarity or anti-unitarity of the group elements.
+With this data the twisted cobordism group
+\begin{equation*}
+	\Omega _{ \text{spin}  } ^{ D+1 } (G;w_{1},w_{2})
+\end{equation*}
+for  $ D $ space-time dimensions can be used to classify the anomalies which
+will eventually be identified the cohomology classes $ a _{ D+1 } \in \Omega _{
+	\text{spin}  } ^{ D+1 } (G;w_{1},w_{2}) $.
+
+In the temporal dimension (0+1 dimensions). These anomalies are classified by the twisted cobordism group $\Omega^2 _{ \text{spin}}( \mathbb{Z}_2;1,0) $, where the symmetry group $
+\mathbb{Z}_2  $ accounts for $ (-1)^F $ and the time reversal symmetry $
+\mathsf{T} $. The symmetry group is $ G_f = \mathbb{Z}_2 ^{ \mathsf{T} } \times
+\mathbb{Z}_2 ^{F}$ and the classification of the anomalies is done by considering three "layers" consisting of groups in cohomology classes as follows:
+\begin{align*}
+	\nu _0 &\in H^0( \mathbb{Z}_2 ^{ \mathsf{T} } , \mathbb{Z}_2),\\
+	\nu _1 &\in H^1( \mathbb{Z}_2 ^{ \mathsf{T} } , \mathbb{Z}_2),\\
+	\nu _2 &\in H^2( \mathbb{Z}_2 ^{ \mathsf{T} } ,U(1)) 
+\end{align*}
+
+\printbibliography
+\end{document}

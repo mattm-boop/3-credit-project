@@ -1,0 +1,176 @@
+% Encoding: UTF-8
+
+@Article{Berezin1975,
+  author    = {F. A. Berezin},
+  journal   = {Communications in Mathematical Physics},
+  title     = {{General concept of quantization}},
+  year      = {1975},
+  number    = {2},
+  pages     = {153 -- 174},
+  volume    = {40},
+  doi       = {cmp/1103860463},
+  publisher = {Springer},
+  url       = {https://doi.org/},
+}
+
+@Article{Batalin1981,
+  author   = {Batalin,I. A. and Vilkovisky,G. A.},
+  journal  = {Physics letters. B},
+  title    = {Gauge algebra and quantization},
+  year     = {1981},
+  number   = {1},
+  pages    = {27-31},
+  volume   = {102},
+  abstract = {Quantization of a general gauge theory in the lagrangian approach is accomplished in closed form. The generating equation is found, containing all the relations of the open gauge algebra. A new class of diagrams is revealed, required by BRS-symmetry, but completely definable only from the requirement of unitarity.},
+  isbn     = {0370-2693},
+  language = {English},
+}
+
+@Article{Berezin1977,
+  author   = {Berezin,F. A. and Marinov,M. S.},
+  journal  = {Annals of physics},
+  title    = {Particle spin dynamics as the grassmann variant of classical mechanics},
+  year     = {1977},
+  number   = {2},
+  pages    = {336-362},
+  volume   = {104},
+  abstract = {A generalization of classical mechanics is presented. The dynamical variables (functions on the phase space) are assumed to be elements of an algebra with anticommuting generators (the Grassmann algebra). The action functional and the Poisson brackets are defined. The equations of motion are deduced from the variational principle. The dynamics are also described by means of the Liouville equation for the phase-space distribution. The canonical quantization leads to the Fermi (anticommutator) commutation relations. The phase-space path integral approach to the quantum theory is also formulated. The theory is applied to describe the particle spin. In the nonrelativistic case, the elements of the phase-space are anticommuting three-vectors ξ, transformed to the Pauli matrices after the quantization:  ξ = (  &  ̵  h  ̷  2  )  1  2  σ  . Classical description of the spin precession and of the spin-orbital forces is given. To introduce the relativistic spin in an invariant manner one needs a five-dimensional phase space (a four-vector plus a scalar). The Lagrangian is singular and there is a constraint, resulting from a “supersymmetry.” The quantized phase-space elements are proportional to the Dirac matrices  γ  5  γ  μ  and  γ  5, while the constraint is transformed to the Dirac equation. The phase-space distribution and the interaction with an external field are also considered.},
+  isbn     = {0003-4916},
+  language = {English},
+}
+
+@Article{Boozer2007,
+  author    = {A D Boozer},
+  journal   = {European Journal of Physics},
+  title     = {Quantum field theory in (0 $\mathplus$ 1) dimensions},
+  year      = {2007},
+  month     = {jun},
+  number    = {4},
+  pages     = {729--745},
+  volume    = {28},
+  abstract  = {We show that many of the key ideas of quantum field theory can be illustrated simply and straightforwardly by using toy models in (0 + 1) dimensions. Because quantum field theory in (0 + 1) dimensions is equivalent to quantum mechanics, these models allow us to use techniques from quantum mechanics to gain insight into quantum field theory. In addition, working in (0 + 1) dimensions considerably simplifies the mathematics, allowing the physical concepts involved to be exhibited more clearly.},
+  doi       = {10.1088/0143-0807/28/4/012},
+  publisher = {{IOP} Publishing},
+  url       = {https://doi.org/10.1088/0143-0807/28/4/012},
+}
+
+@Article{PhilipBoyleSmith2021,
+  author   = {Philip Boyle Smith, David Tong},
+  journal  = {SciPost physics},
+  title    = {Boundary RG flows for fermions and the mod 2 anomaly},
+  year     = {2021},
+  number   = {1},
+  pages    = {010},
+  volume   = {10},
+  abstract = {Boundary conditions for Majorana fermions in d=1+1 dimensions fall into one of two SPT phases, associated to a mod 2 anomaly. Here we consider boundary conditions for 2N Majorana fermions that preserve a $U(1)^N$ symmetry. In general, the left-moving and right-moving fermions carry different charges under this symmetry, and implementation of the boundary condition requires new degrees of freedom, which manifest themselves in a boundary central charge, $g$. We follow the boundary RG flow induced by turning on relevant boundary operators. We identify the infra-red boundary state. In many cases, the boundary state flips SPT class, resulting in an emergent Majorana mode needed to cancel the anomaly. We show that the ratio of UV and IR boundary central charges is given by $g^2_{IR} / g^2_{UV} = {\rm dim}\,({\cal O})$, the dimension of the perturbing boundary operator. Any relevant operator necessarily has ${\rm dim}({\cal O}) < 1$, ensuring that the central charge decreases in accord with the g-theorem.},
+  language = {English},
+}
+
+@Article{Rabinovich2019,
+  author   = {Rabinovich,Eugene and Rabinovich,Eugene},
+  journal  = {Letters in mathematical physics},
+  title    = {A mathematical analysis of the axial anomaly},
+  year     = {2019},
+  number   = {5},
+  pages    = {1055-1117},
+  volume   = {109},
+  abstract = {As is well known to physicists, the axial anomaly of the massless free fermion in Euclidean signature is given by the index of the corresponding Dirac operator. We use the Batalin--Vilkovisky (BV) formalism and the methods of equivariant quantization of Costello and Gwilliam to produce a new, mathematical derivation of this result. Using these methods, we formalize two conventional interpretations of the axial anomaly, the first as a violation of current conservation at the quantum level and the second as the obstruction to the existence of a well-defined fermionic partition function. Moreover, in the formalism of Costello and Gwilliam, anomalies are measured by cohomology classes in a certain obstruction--deformation complex. Our main result shows that--in the case of the axial symmetry--the relevant complex is quasi-isomorphic to the complex of de Rham forms of the space--time manifold and that the anomaly corresponds to a top-degree cohomology class which is trivial if and only if the index of the corresponding Dirac operator is zero.},
+  isbn     = {0377-9017},
+  keywords = {Theoretical, Mathematical and Computational Physics; Complex Systems; Physics; 81T18; Batlin-Vilkovisky formalism; Geometry; Massless free fermion; Perturbative anomalies; 18G40; 81T15; 81T20; 35K08; Group Theory and Generalizations; 81T50; Cohomological methods in quantum field theory; Physicists; Analysis; Numerical analysis; Operators (mathematics); Deformation; Fermions; Mathematical analysis; Partitions (mathematics); Homology; Formalism; Anomalies},
+  language = {English},
+}
+
+@Article{Caracciolo2013,
+  author   = {Caracciolo,Sergio and Sokal,Alan D. and Sportiello,Andrea},
+  journal  = {Advances in applied mathematics},
+  title    = {Algebraic/combinatorial proofs of Cayley-type identities for derivatives of determinants and pfaffians},
+  year     = {2013},
+  number   = {4},
+  pages    = {474-594},
+  volume   = {50},
+  abstract = {The classic Cayley identity states that det(a)(detX).sup.s=s(s+1)a[macron](s+n-1)(detX).sup.s-1 where X=(x.sub.ij) is an nxn matrix of indeterminates and a=(a/ax.sub.ij) is the corresponding matrix of partial derivatives. In this paper we present straightforward algebraic/combinatorial proofs of a variety of Cayley-type identities, both old and new. The most powerful of these proofs employ Grassmann algebra (=exterior algebra) and Grassmann-Berezin integration. Among the new identities proven here are a pair of "diagonal-parametrized" Cayley identities, a pair of "Laplacian-parametrized" Cayley identities, and the "product-parametrized" and "border-parametrized" rectangular Cayley identities.;The classic Cayley identity states thatdet(∂)(detX)s=s(s+1)⋯(s+n−1)(detX)s−1 where X=(xij) is an n×n matrix of indeterminates and ∂=(∂/∂xij) is the corresponding matrix of partial derivatives. In this paper we present straightforward algebraic/combinatorial proofs of a variety of Cayley-type identities, both old and new. The most powerful of these proofs employ Grassmann algebra (=exterior algebra) and Grassmann–Berezin integration. Among the new identities proven here are a pair of “diagonal-parametrized” Cayley identities, a pair of “Laplacian-parametrized” Cayley identities, and the “product-parametrized” and “border-parametrized” rectangular Cayley identities.;},
+  isbn     = {0196-8858},
+  keywords = {Cayley operator; Omega operator; Cayley identity; Capelli identity; Determinant; Pfaffian; Grassmann algebra; Omega process; Grassmann–Berezin integration; Prehomogeneous vector space; Bernstein–Sato polynomial; b-Function; Classical invariant theory; Exterior algebra; Algebra},
+  language = {English},
+}
+
+@Article{Callan1985,
+  author   = {Callan,C. G. and Harvey,J. A.},
+  journal  = {Nuclear physics. B},
+  title    = {Anomalies and fermion zero modes on strings and domain walls},
+  year     = {1985},
+  number   = {1},
+  pages    = {427-436},
+  volume   = {250},
+  abstract = {We show that the mathematical relation between non-abelian anomalies in 2  n dimensions, the parity anomaly in 2  n+1 dimensions, and the Dirac index density in 2  n+2 dimensions can be understood in terms of the physics of fermion zero modes on strings and domain walls. We show that the Dirac equation possesses chiral zero modes in the presence of strings in 2  n+2 dimensions (such as occur in axion theories) or domain walls in 2  n+1 dimensions. We show that the anomalies due to the chiral zero modes are exactly cancelled by anomalies due to the coupling of axion-like fields to the Dirac index density or by anomalies due to the induced topological mass term.},
+  isbn     = {0550-3213},
+  language = {English},
+}
+
+@Article{Sedrakyan2011,
+  author    = {Tigran A. Sedrakyan and Victor M. Galitski},
+  journal   = {Physical Review B},
+  title     = {Majorana path integral for nonequilibrium dynamics of two-level systems},
+  year      = {2011},
+  month     = {apr},
+  number    = {13},
+  pages     = {134303},
+  volume    = {83},
+  doi       = {10.1103/physrevb.83.134303},
+  publisher = {American Physical Society ({APS})},
+}
+
+@PhdThesis{Schad2016,
+  author = {Pablo Schad},
+  school = {Karlsruher Institut für Technologie},
+  title  = {On the Majorana Representation for Spin 1/2},
+  year   = {2016},
+}
+
+@Unpublished{Park2003,
+  author   = {Jae-Suk Park},
+  title    = {Pursuing The Quantum World},
+  year     = {2003},
+  abstract = {Exploiting the path integral approach al la Batalin and Vilkovisky, we show
+that any anomaly-free Quantum Field Theory (QFT) comes with a family
+parametrized by certain moduli space M, which tangent space at the point
+corresponding to the initial QFT is given by the space of all observables.
+Furthermore the tangent bundle over M is equipped with flat quantum con-
+nection, which can be used to determine all correlation functions of the
+family of QFTs. We also argue that considering family of QFTs is an in-
+evitable step, due to the fact that the products of quantum observables are
+not quantum observables in general, which leads to a new ”global” perspec-
+tive on quantum world. We also uncover structure of d-algebra in the large
+class of d-dimensional QFT. This leads to an universal quantization machine
+for d-algebras decorated by algebro-differential-topology of (d + 1)-manifolds
+as well as a new perspective on differential-topology of low dimensions. This
+paper is a summary of a forthcoming paper of this author.},
+}
+
+@Misc{Park2005,
+  author = {Jeong-Hyuck Park},
+  title  = {Lecture note on Clifford algebra},
+  year   = {2005},
+}
+
+@Unpublished{,
+  author   = {Zihni Kaan Baykara},
+  title    = {Geometric Quantization},
+  year     = {2019},
+  abstract = {Abstract. Geometric Quantization (GQ) is a program for obtaining a quantum mechanical system given a classical mechanical system. The object of quantization need not be a physically feasible mechanical system, symplectic manifolds (with sufficiently nice properties) are also quantizable. For example, the quantization procedure for attaining spin originates from the 2-sphere, and not a cotangent bundle of some phase space. However, quantization is not a categorical functor between symplectic manifolds and quantum mechanical spaces, therefore this procedure may not seem completely natural. This expository paper assumes little background in differential geometry, and some familiarity with analytical mechanics, and quantum mechanics.},
+}
+
+@Article{Delmastro2021,
+  author        = {Diego Delmastro and Davide Gaiotto and Jaume Gomis},
+  title         = {Global Anomalies on the Hilbert Space},
+  year          = {2021},
+  month         = jan,
+  abstract      = {We show that certain global anomalies can be detected in an elementary fashion by analyzing the way the symmetry algebra is realized on the torus Hilbert space of the anomalous theory. Distinct anomalous behaviours imprinted in the Hilbert space are identified with the distinct cohomology "layers" that appear in the classification of anomalies in terms of cobordism groups. We illustrate the manifestation of the layers in the Hilbert for a variety of anomalous symmetries and spacetime dimensions, including time-reversal symmetry, and both in systems of fermions and in anomalous topological quantum field theories (TQFTs) in 2+1d. We argue that anomalies can imply an exact bose-fermi degeneracy in the Hilbert space, thus revealing a supersymmetric spectrum of states; we provide a sharp characterization of when this phenomenon occurs and give nontrivial examples in various dimensions, including in strongly coupled QFTs. Unraveling the anomalies of TQFTs leads us to develop the construction of the Hilbert spaces, the action of operators and the modular data in spin TQFTs, material that can be read on its own.},
+  archiveprefix = {arXiv},
+  eprint        = {2101.02218},
+  file          = {:http\://arxiv.org/pdf/2101.02218v1:PDF},
+  keywords      = {hep-th, cond-mat.str-el},
+  primaryclass  = {hep-th},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
